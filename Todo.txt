@@ -1,0 +1,8 @@
+Person highlight grid:
+  1. Custom post type that restricts blocks to post title, background image,
+    person name and title, and hover/click-revealed info (video, images, audio)
+  2. Hover/click reveal more info
+  3. Break groups of 9 into separate 3x3 sections
+  4. Shuffled background colors
+    One way to do this, assuming the grid never exceeds 3x3 dimensions,
+    is to use 4 background colors in a repeating pattern.

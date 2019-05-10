@@ -49,3 +49,21 @@ Here's a great tutorial on how to
 use color variables properly:
 http://sachagreif.com/sass-color-variables/
 */
+
+$c-primary: #e24e42;
+$c-secondary: #e98000;
+$c-tertiary: #eb6e80;
+$c-quaternary: #008f95;
+
+.c-grid-overlay-1 {
+  background-color: $c-primary;
+}
+.c-grid-overlay-2 {
+  background-color: $c-secondary;
+}
+.c-grid-overlay-3 {
+  background-color: $c-tertiary;
+}
+.c-grid-overlay-4 {
+  background-color: $c-quaternary;
+}

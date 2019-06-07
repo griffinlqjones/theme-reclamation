@@ -140,6 +140,7 @@ function bones_scripts_and_styles() {
 
 		//adding scripts file in the footer
 		wp_register_script( 'bones-js', get_stylesheet_directory_uri() . '/library/js/scripts.js', array( 'jquery' ), '', true );
+		wp_register_script( 'grid-js', get_stylesheet_directory_uri() . '/dist/bundle.js', array(), '', true );
 
 		// enqueue styles and scripts
 		wp_enqueue_script( 'bones-modernizr' );
@@ -155,6 +156,7 @@ function bones_scripts_and_styles() {
 		*/
 		wp_enqueue_script( 'jquery' );
 		wp_enqueue_script( 'bones-js' );
+		wp_enqueue_script( 'grid-js' );
 
 	}
 }
@@ -294,6 +296,14 @@ function bones_excerpt_more($more) {
 	global $post;
 	// edit here if you like
 	return '...  <a class="excerpt-read-more" href="'. get_permalink( $post->ID ) . '" title="'. __( 'Read ', 'bonestheme' ) . esc_attr( get_the_title( $post->ID ) ).'">'. __( 'Read more &raquo;', 'bonestheme' ) .'</a>';
+}
+
+function is_non_empty_block( $block ) {
+	return ! ( $block['blockName'] === null && empty( trim( $block['innerHTML'] ) ) );
+}
+
+function parse_blocks_ignore_empty_blocks( $input ) {
+	return array_filter( parse_blocks( $input ), 'is_non_empty_block' );
 }
 
 

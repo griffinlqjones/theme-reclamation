@@ -1,0 +1,47 @@
+html, body {
+  background-color: $white;
+  color: #000000;
+  font-family: $serif;
+}
+
+h1 {
+  font-family: $serif;
+}
+h2 {
+  font-family: $sans-serif;
+}
+h3 {
+  font-family: $sans-serif;
+}
+h4 {
+  font-family: $serif;
+}
+h5 {
+  font-family: $serif;
+}
+h6 {
+  font-family: $serif;
+}
+p {
+  font-family: $serif;
+  font-size: 20px;
+  color: #000;
+}
+
+#container {
+  background-color: $white;
+}
+
+div#content {
+  background-color: $white;
+  margin: 0px;
+  margin-top: 0px;
+}
+
+#inner-header {
+  background-color: $white;
+}
+
+#inner-content {
+  width: 85%;
+}

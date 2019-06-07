@@ -70,4 +70,37 @@ probably best not to use it. I mean, were you going to anyway? */
 	box-sizing:         $type;
 }
 
+//
+// @mixin hover-shadow {
+//   transition: box-shadow .5s ease-out;
+//   &:hover {
+//     box-shadow: 8px 8px #222222;
+//   }
+// }
+//
+@mixin hover-shadow {
+  &:hover,
+  &:focus,
+  &:active {
+    &.image-wrapper {
+      transform: scale(.985);
+    }
+    &.grid-item-normal .image-wrapper {
+      transform: scale(.97);
+    }
+    &.grid-item-big .image-wrapper {
+      transform: scale(.985);
+    }
+  }
+  .image-wrapper {
+    transition: transform .3s ease-out;
+  }
+}
 
+// @mixin hover-shadow {
+//   border: 0px solid white;
+//   // transition: border .3s ease-out;
+//   &:hover {
+//     border: 5px solid white;
+//   }
+// }

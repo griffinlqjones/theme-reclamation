@@ -1,0 +1,26 @@
+
+header.header {
+  background-color: $white;
+  height: auto;
+  #inner-header {
+
+    background-color: $white;
+    height: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    @media screen and (min-width: $screen-mobile-sm) {
+      height: auto;
+      padding: 5%;
+      width: 100%;
+    }
+    @media screen and (min-width: $screen-mobile) {
+      padding: 1% 8%;
+    }
+    @media screen and (min-width: $screen-base) {
+      padding: 3% 8%;
+    }
+  }
+}

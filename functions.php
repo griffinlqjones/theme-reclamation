@@ -12,7 +12,7 @@ sidebars, comments, etc.
 require_once( 'library/bones.php' );
 
 // CUSTOMIZE THE WORDPRESS ADMIN (off by default)
-// require_once( 'library/admin.php' );
+require_once( 'library/admin.php' );
 
 /*********************
 LAUNCH BONES
@@ -27,8 +27,16 @@ function bones_ahoy() {
   // let's get language support going, if you need it
   load_theme_textdomain( 'bonestheme', get_template_directory() . '/library/translation' );
 
+  // Flush rewrite rules for custom post types
+  add_action( 'after_switch_theme', 'bones_flush_rewrite_rules' );
+
   // USE THIS TEMPLATE TO CREATE CUSTOM POST TYPES EASILY
-  require_once( 'library/custom-post-type.php' );
+  require_once( 'library/custom-post-types/custom-post-type.php' );
+
+  // This is the custom post type for the image grid
+  require_once( 'library/custom-post-types/person.php' );
+
+  require_once( 'library/admin/admin-grid-organizer.php');
 
   // launching operation cleanup
   add_action( 'init', 'bones_head_cleanup' );
@@ -65,7 +73,6 @@ add_action( 'after_setup_theme', 'bones_ahoy' );
 
 
 /************* OEMBED SIZE OPTIONS *************/
-
 if ( ! isset( $content_width ) ) {
 	$content_width = 680;
 }
@@ -103,6 +110,15 @@ function bones_custom_image_sizes( $sizes ) {
         'bones-thumb-600' => __('600px by 150px'),
         'bones-thumb-300' => __('300px by 100px'),
     ) );
+}
+
+
+// Flush rewrite rules for custom post types
+add_action( 'after_switch_theme', 'bones_flush_rewrite_rules' );
+
+// Flush your rewrite rules
+function bones_flush_rewrite_rules() {
+	flush_rewrite_rules();
 }
 
 /*
@@ -249,6 +265,43 @@ add_action('wp_enqueue_scripts', 'bones_fonts');
 Here's where the NEW stuff is going
 */
 
+// Change post title placeholder
+function wpb_change_title_text( $title ){
+     $screen = get_current_screen();
+
+     if  ( 'person' == $screen->post_type ) {
+          $title = 'Person\'s Name...';
+     }
+
+     return $title;
+}
+add_filter( 'enter_title_here', 'wpb_change_title_text' );
+
+
+/**
+ * Enqueue Gutenberg scripts and styles to backend area.
+ */
+function wds_gutenberg_assets() {
+	wp_enqueue_style( 'wds-gutenberg-admin', get_stylesheet_directory_uri() . '/gutenberg.css', array(), '1.0.0' );
+}
+add_action( 'enqueue_block_assets', 'wds_gutenberg_assets' );
+
+// Enqueue front-end grid script
+// function qg_enqueue() {
+//     if (is_home()) {
+//         wp_enqueue_script(
+//             'qgjs',
+//             get_stylesheet_directory_uri().'/dist/bundle.js'
+//         );
+//     }
+// }
+// add_action('wp_enqueue_scripts', 'qg_enqueue');
+
+// function add_google_fonts() {
+//   wp_enqueue_script( 'crimson_font', './library/fonts/CrimsonText-Regular.ttf' );
+//   wp_enqueue_script( 'barlow_font', './library/fonts/Barlow-Regular.ttf' );
+// }
+// add_action('wp_enqueue_scripts', 'add_google_fonts');
 
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>

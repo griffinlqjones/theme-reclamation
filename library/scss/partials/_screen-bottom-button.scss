@@ -1,0 +1,28 @@
+div.screen-bottom-button-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  width: 100%;
+  white-space: nowrap;
+
+  a.screen-bottom-button {
+    padding: .5rem;
+    border: 2px solid $c-primary;
+    border-radius: 5px;
+    color: $c-primary;
+    width: min-content;
+    font-family: $sans-serif-semibold;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover {
+      background-color: transparentize($c-primary, 0.9);
+    }
+    &:active {
+      background-color: $c-primary;
+      color: $white;
+      border: none;
+    }
+  }
+}

@@ -41,6 +41,7 @@ the whole project.
 // the grid
 @import "partials/grid";
 
+
 /*********************
 IMPORTING MODULES
 Modules are reusable blocks or elements we use throughout the project.
@@ -58,8 +59,32 @@ you hate oysters, then the world is your peanut butter & jelly sandwich.
 // forms (inputs & labels)
 @import "modules/forms";
 
+// Global things
+@import "partials/globals";
+
+// Header styles
+@import "partials/page-header";
+
+// Site name - home link
+@import "partials/site-badge";
+
+// WP Multilang Language Switcher
+@import "modules/wpm-lang-switch";
+
+@import "partials/screen-bottom-button";
+
+// Scrollytelling section
+@import "partials/scrollytelling-section";
+
 // image post grid
 @import "partials/image-post-grid";
+
+// image post grid
+@import "partials/single-person";
+
+// Simgle post modal
+@import "partials/single-post-modal";
+
 
 /*********************
 BASE (MOBILE) SIZE

@@ -1,0 +1,27 @@
+.site-badge {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 0;
+  text-decoration: none;
+  width: min-content;
+
+  &:hover {
+
+  }
+
+  p {
+    word-break: normal;
+    text-transform: uppercase;
+    background-color: $c-primary;
+    font-weight: bold;
+    color: #ffffff;
+    font-family: $sans-serif-bold;
+    font-size: 18px;
+    line-height: 75%;
+    letter-spacing: 0.15em;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+}

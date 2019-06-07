@@ -1,0 +1,9 @@
+{
+  "post_types": {
+    "person": {
+      "post_title": {},
+      "post_content": {},
+      "post_excerpt": {}
+    }
+  }
+}

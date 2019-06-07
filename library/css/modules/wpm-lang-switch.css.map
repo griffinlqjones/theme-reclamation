@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "wpm-lang-switch.css",
+	"sources": [
+		"../../scss/modules/wpm-lang-switch.scss"
+	],
+	"names": [],
+	"mappings": "AAAA,AAAA,sBAAsB,AAAA,cAAc,CAAC;EACnC,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;EACb,gBAAgB,EAAE,MAAM,GACzB"
+}

@@ -1,0 +1,198 @@
+.profile-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0 10%;
+  margin-bottom: 5%;
+  color: #000000;
+
+  @media screen and (min-width: $screen-mobile) {
+    padding: 0 15%;
+  }
+}
+
+.profile-heading-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  order: 1;
+  padding: 0px;
+  text-align: center;
+  align-content: center;
+
+
+  @media screen and (min-width: $screen-mobile) {
+    width: 50%;
+    order: 0;
+    text-align: left;
+  }
+
+  h1.profile-heading {
+    width: 100%;
+    margin: .6rem 0px;
+    font-family: $serif;
+    font-weight: 600;
+    font-size: 38px;
+    letter-spacing: 0.1rem;
+
+    @media screen and (min-width: $screen-mobile) {
+      width: 100%;
+      margin: .6rem 0px;
+      font-family: $serif;
+      font-weight: 600;
+      font-size: 56px;
+      letter-spacing: 0.1rem;
+    }
+  }
+
+  h2.profile-subheading {
+    font-family: $sans-serif;
+    width: 100%;
+    margin-top: 0px;
+    margin-bottom: 5%;
+    font-size: 14px;
+    font-weight: 100;
+    text-transform: uppercase;
+    line-height: 140%;
+    color: #535353;
+    letter-spacing: 0.115em;
+  }
+}
+
+blockquote.feature-quote {
+  font-family: $serif;
+  font-size: 20px;
+  width: 100%;
+  margin: 0px 0px;
+  padding: 0.35em 0px;
+  padding-left: 2%;
+  line-height: 1.2;
+  position: relative;
+  text-align: left;
+
+  @media screen and (min-width: $screen-mobile) {
+    padding-left: 0%;
+    line-height: 1.45;
+  }
+
+
+
+  &:before {
+    display: block;
+    padding-left: 10px;
+    position: absolute;
+    top: -5px;
+    left: -25px;
+    font-size: 60px;
+    line-height: 100%;
+    text-transform: uppercase;
+    font-weight: normal;
+    color: $c-primary;
+    content: "\201C";
+
+
+    @media screen and (min-width: $screen-mobile) {
+      left: -35px;
+      padding: 0;
+      font-size: 72px;
+    }
+  }
+}
+
+
+.profile-picture-wrapper-outer {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  background-color: unset;
+  order: 0;
+
+  @media screen and (min-width: $screen-mobile) {
+    margin-left: auto;
+    margin-right: 0px;
+    width: 45%;
+    order: 1;
+  }
+}
+
+button.profile-picture-wrapper-inner {
+  position: relative;
+  background-color: unset;
+  height: 0;
+  width: 100%;
+  padding-bottom: 120%;
+  float:left;
+  overflow: hidden;
+  border: none;
+  border-radius: 0;
+
+  @media screen and (min-width: $screen-mobile ) {
+    height: auto;
+    width: auto;
+    padding-bottom: 0px;
+  }
+
+  &:active, :focus{
+    border-style:none;
+    border-width: 0;
+  }
+  &:hover{
+
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: -3%;
+    left: 0;
+
+    @media screen and (min-width: $screen-mobile ) {
+      position: relative;
+      top: 0;
+    }
+  }
+}
+
+
+.bio-section-container {
+  position: relative;
+  width: 100%;
+  padding: 2.5% 10%;
+  margin-bottom: 35px;
+  background-color: #F4F4F4;
+  color: #000;
+  line-height: 130%;
+  text-align: center;
+
+  @media screen and (min-width: $screen-mobile ) {
+    padding: 2.5% 25%;
+  }
+
+  .bio-section-lead {
+    width: 100%;
+    opacity: 0.5;
+    font-family: $sans-serif;
+    color: #535353;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 140%;
+    letter-spacing: 0.115em;
+    text-transform: uppercase;
+
+  }
+}
+
+.body-text-container {
+  padding: 2.5% 10%;
+  width: 100%;
+
+  @media screen and (min-width: $screen-mobile ) {
+    padding: 2.5% 25%;
+  }
+
+  p {
+    text-indent: 35px;
+  }
+}

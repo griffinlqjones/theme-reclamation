@@ -49,14 +49,20 @@ I've edited it a bit, but it's a nice starting point.
 
 
 // font stacks
-$sans-serif:        "Helvetica Neue", Helvetica, Arial, sans-serif;
-$serif:             "Georgia", Cambria, Times New Roman, Times, serif;
+// $sans-serif:        "Helvetica Neue", Helvetica, Arial, sans-serif;
+// $serif:             "Georgia", Cambria, Times New Roman, Times, serif;
+$serif: "Crimson Text Regular", serif;
+$serif-bold: "Crimson Text Bold", serif;
+
+$sans-serif: "Barlow Regular", sans-serif;
+$sans-serif-semibold: "Barlow SemiBold", sans-serif;
+$sans-serif-bold: "Barlow Bold", sans-serif;
 
 /*
  i imported this one in the functions file so bones would look sweet.
  don't forget to remove it for your site.
 */
-$lato:              'Lato', $sans-serif;
+$lato: 'Lato', sans-serif;
 
 /*
 some nice typographical defaults
@@ -81,4 +87,3 @@ p {
        -o-font-feature-settings: "liga", "dlig";
           font-feature-settings: "liga", "dlig";
 }
-

@@ -70,3 +70,4 @@ node_modules
 jspm_packages
 
 /vendor/
+node_modules/tar/package.json

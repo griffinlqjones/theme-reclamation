@@ -8,7 +8,16 @@
   width: min-content;
 
   &:hover {
-
+    p {
+      background-color: transparentize($c-primary, 0.9);
+      color: $c-primary;
+    }
+  }
+  &:active {
+    p {
+      background-color: $c-primary;
+      color: $white;
+    }
   }
 
   p {

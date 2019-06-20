@@ -80,7 +80,7 @@
   <?php endif; ?>
 
   <div class="screen-bottom-button-wrapper">
-    <a class="screen-bottom-button" href="<?php echo get_home_url(); ?>">Return Home</a>
+    <a class="screen-bottom-button" href="<?php /* echo get_home_url(); */ the_permalink('1664'); ?>">Return To Grid</a>
   </div>
 
 </main>

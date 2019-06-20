@@ -6,7 +6,7 @@
 		<main id="main" class="m-all cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
 			<!-- <?php get_template_part('library/template-parts/scrollytelling-section'); ?> -->
-			<?php get_template_part('library/template-parts/image-post-grid'); ?>
+			<!-- <?php get_template_part('library/template-parts/image-post-grid'); ?> -->
 
 		</main>
 
